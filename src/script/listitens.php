@@ -4,10 +4,10 @@ $username = "root";
 $password = "";
 $dbname = "logistics_db";
 
-// Cria conexão
+//cria conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifica conexão
+//verifica conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
@@ -29,8 +29,7 @@ if ($result->num_rows > 0) {
                 </tr>
             </thead>
             <tbody>";
-    
-    // Saída dos dados de cada linha
+            
     while($row = $result->fetch_assoc()) {
         echo "<tr>
                 <td>" . $row["id"] . "</td>
